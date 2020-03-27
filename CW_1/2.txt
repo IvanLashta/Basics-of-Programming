@@ -1,0 +1,123 @@
+Ukr:
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "Ukrainian");
+    int num;
+    cout << "Введіть цифру : ";
+    cin >> num;
+
+    switch (num){
+        case 0:{
+            cout << "Нуль";
+            break;
+        }
+        case 1:{
+            cout << "Один";
+            break;
+        }
+        case 2:{
+            cout << "Два";
+            break;
+        }
+        case 3:{
+            cout << "Три";
+            break;
+        }
+        case 4:{
+            cout << "Чотири";
+            break;
+        }
+        case 5:{
+            cout << "П'ять";
+            break;
+        }
+        case 6:{
+            cout << "Шість";
+            break;
+        }
+        case 7:{
+            cout << "Сім";
+            break;
+        }
+        case 8:{
+            cout << "Вісім";
+            break;
+        }
+        case 9:{
+            cout << "Дев'ять";
+            break;
+        }
+        default:{
+            cout << "Введено не коректні дані";
+            break;
+        }
+    }
+
+    return 0;
+}
+
+Eng:
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num;
+    cout << "Enter a number : ";
+    cin >> num;
+
+    switch (num){
+        case 0:{
+            cout << "Zero";
+            break;
+        }
+        case 1:{
+            cout << "One";
+            break;
+        }
+        case 2:{
+            cout << "Two";
+            break;
+        }
+        case 3:{
+            cout << "Three";
+            break;
+        }
+        case 4:{
+            cout << "Four";
+            break;
+        }
+        case 5:{
+            cout << "Five";
+            break;
+        }
+        case 6:{
+            cout << "Six";
+            break;
+        }
+        case 7:{
+            cout << "Seven";
+            break;
+        }
+        case 8:{
+            cout << "Eight";
+            break;
+        }
+        case 9:{
+            cout << "Nine";
+            break;
+        }
+        default:{
+            cout << "Invalid data entered";
+            break;
+        }
+    }
+
+    return 0;
+}
+

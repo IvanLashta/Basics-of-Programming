@@ -1,0 +1,88 @@
+Ukr:
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "Ukrainian");
+    const int SIZE = 100;
+    int arr[SIZE] = {0};
+    int n;
+    bool isSorted = true;
+    cout << "Введіть розмір масиву : ";
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        cout << "Введіть елемент масиву : ";
+        cin >> arr[i];
+    }
+
+    bool isGrowth = arr[0] < arr[1];
+    if (isGrowth) {
+        for (int i = 0; i < n - 1; ++i) {
+            if(arr[i] > arr[i + 1]){
+                isSorted = false;
+                break;
+            }
+        }
+    } else{
+        for (int i = 0; i < n - 1; ++i) {
+            if(arr[i] < arr[i + 1]){
+                isSorted = false;
+                break;
+            }
+        }
+    }
+
+    if(isSorted){
+        cout << "Так";
+    }else{
+        cout <<"Ні";
+    }
+    return 0;
+}
+
+Eng:
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    const int SIZE = 100;
+    int arr[SIZE] = {0};
+    int n;
+    bool isSorted = true;
+    cout << "Enter the size of the array : ";
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        cout << "Enter an array element : ";
+        cin >> arr[i];
+    }
+
+    bool isGrowth = arr[0] < arr[1];
+    if (isGrowth) {
+        for (int i = 0; i < n - 1; ++i) {
+            if(arr[i] > arr[i + 1]){
+                isSorted = false;
+                break;
+            }
+        }
+    } else{
+        for (int i = 0; i < n - 1; ++i) {
+            if(arr[i] < arr[i + 1]){
+                isSorted = false;
+                break;
+            }
+        }
+    }
+
+    if(isSorted){
+        cout << "Yes";
+    }else{
+        cout <<"Ni";
+    }
+    return 0;
+}

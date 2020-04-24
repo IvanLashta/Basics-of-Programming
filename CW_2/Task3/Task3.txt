@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cstring>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    char *str = new char[255];
+    cout << "Enter string" << endl;
+    cin.getline(str, 255);
+
+    double n;
+    cout << "Enter a number of parts you need to divide string(number must be <= " << strlen(str) / 2 << ") : ";
+    cin >> n;
+
+    int help = ceil(strlen(str) / n);
+
+    char **arr = new char*[int(n)];
+    char *word = new char[255];
+
+    int step = 0;
+    for (int i = 0; i < n - 1; ++i) {
+        arr[i] = new char[help];
+        for (int j = i * help; j < help * (i + 1); ++j) {
+            word[step++] = str[j];
+        }
+        step = 0;
+        strcpy(arr[i], word);
+    }
+
+    step = 0;
+
+    for (int i = (int(n) - 1) * help; i < strlen(str); ++i) {
+        word[step++] = str[i];
+    }
+    arr[int(n) - 1] = new char[strlen(str) - ((int(n) - 1) * help)];
+    strcpy(arr[int(n) - 1], word);
+
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << ", ";
+    }
+
+    for (int i = 0; i < n; ++i) {
+        delete [] arr[i];
+    }
+    delete [] arr;
+    delete [] str;
+    return 0;
+}
